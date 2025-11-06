@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="color: orange;">Ejercicio con tablas</h1> <!--style ="color" cambia el color de la letra-->
+    <hr />
+    <table border="1" cellpadding="10px">
+        <!--declaramos la tabla con etiqueta table--><!--asignamos el tamaño del borde-->
+        <caption>Mi primera tabla</caption><!--caption es un titulo para la tabla-->
+        <tr bgcolor="rgb(255,00,120)">
+            <!--bg cambia el fondo (background) aqui afecta a toda la fila--><!--color en rgb-->
+            <th>Encabezado 1</th><!--es un encabezado de celda-->
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+        <tr><!--tr representa las filas-->
+            <td bgcolor="#ECF1AB">Celda 1</td><!--color en hexadecimal y aqui afecta a la celda-->
+            <td bgcolor="#ECF1AB">Celda 2</td><!--td son las celdas y su contenido-->
+            <td bgcolor="#ECF1AB">Celda 3</td>
+        </tr>
+        <tr>
+            <td bgcolor="lightcoral">Celda 4</td><!--colores con nombre-->
+            <td bgcolor="lightcoral">Celda 5</td>
+            <td bgcolor="lightcoral">Celda 6</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td>celda</td>
+            <td rowspan="2">celda</td><!--combina celdas verticalmente-->
+            <td rowspan="3">celda</td>
+            <td rowspan="4">celda</td>
+        </tr>
+        <tr>
+            <td>celda</td>
+        </tr>
+        <tr>
+            <td colspan="2">celda</td><!--combina celdas horizontalmente-->
+            <td colspan="3">celda</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">celda</td><!--combina celdas vertical y horizontal-->
+            <td>celda</td>
+            <td>celda</td>
+        </tr>
+    </table>
+
+    <table border="3">
+        <thead bgcolor="darkred"><!--agrupa las filas que representan el encabezado de la tabla-->
+            <tr>
+                <td rowspan="3"></td>
+                <td colspan="6"> Ventas de coches</td>
+            </tr>
+            <tr>
+                <td colspan="2">1 trimestre</td>
+                <td colspan="2">2 trimestre</td>
+                <td colspan="2">3 trimestre</td>
+            </tr>
+            <tr>
+                <td>Nacionales</td>
+                <td>Importados</td>
+                <td>Nacionales</td>
+                <td>Importados</td>
+                <td>Nacionales</td>
+                <td>Importados</td>
+            </tr>
+        </thead>
+        <tbody bgcolor="green"><!--agrupa por el cuerpo, el contenido de la tabla-->
+            <tr>
+                <td>Año 2019</td>
+                <td>341</td>
+                <td>561</td>
+                <td>234</td>
+                <td>129</td>
+                <td>340</td>
+                <td>261</td>
+            </tr>
+            <tr>
+                <td>Año 2020</td>
+                <td>341</td>
+                <td>561</td>
+                <td>234</td>
+                <td>129</td>
+                <td>340</td>
+                <td>261</td>
+            </tr>
+            <tr>
+                <td>Año 2021</td>
+                <td>341</td>
+                <td>561</td>
+                <td>234</td>
+                <td>129</td>
+                <td>340</td>
+                <td>261</td>
+            </tr>
+            <tr>
+                <td>Año 2022</td>
+                <td>741</td>
+                <td>263</td>
+                <td>721</td>
+                <td>841</td>
+                <td>590</td>
+                <td>251</td>
+            </tr>
+        </tbody>
+        <tfoot bgcolor="gold"><!--agrupa las filas que dan un resumen o pie de tabla-->
+            <tr>
+                <td>Total</td>
+                <td>1082</td>
+                <td>824</td>
+                <td>955</td>
+                <td>970</td>
+                <td>930</td>
+                <td>512</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
