@@ -1,0 +1,33 @@
+body{
+font-family: Calibri, Arial, Helvetica, sans-serif;
+text-transform:uppercase;
+}
+
+h1{
+    background-color:#BFBFBF;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #1F497D;
+    font-size: 24px;
+    word-spacing: 1.5em;
+    letter-spacing: 0.5em;
+}
+
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #632423;
+    font-size: 18px;
+    letter-spacing: 0.5em;
+}
+
+li{
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+b{
+    font-style: normal;
+    font-weight: normal;
+    font-variant: small-caps;
+}

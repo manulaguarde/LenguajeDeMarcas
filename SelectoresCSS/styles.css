@@ -1,0 +1,9 @@
+p>i{ /*selector de hijos: solo afecta a hijos directos*/
+    color: crimson 
+}
+
+h1~h2{ /*selector de hermanos: le estoy dando formato al h2*/
+    color: blue
+}
+
+
