@@ -30,4 +30,10 @@ b{
     font-style: normal;
     font-weight: normal;
     font-variant: small-caps;
+    
+}
+span::first-letter{ 
+    font-weight: bold !important; 
+    text-transform: uppercase;
+    color: red;
 }
