@@ -1,11 +1,14 @@
 *{
     font-family: sans-serif;
-    background-color: rgb(243, 248, 248);
+    background-color: rgb(240, 246, 248);
     line-height: 1.5;
+    padding: 5px;
+    color: #4d4d4d;
+    
 }
 
 h1{
-    color: rgb(60, 80, 136);
+    color: rgb(40, 56, 100);
     text-shadow: 5px 5px 5px #666;  
     text-align: center;  
 }
@@ -16,6 +19,7 @@ hr + div{
 
 div+h2{
     text-align: right;
+    color:rgb(50, 99, 159) ;
 }
 
 h1 + hr{
@@ -23,19 +27,25 @@ h1 + hr{
    width: 80%;
 }
 
+hr + h2{
+     color:rgb(50, 99, 159) ;
+}
+
 p{
     text-align: justify;
 }
 
 p::first-letter{
-    color: blue;
+    color: rgb(50, 99, 159);
     font-size: 2em;
+    font-weight: bold;
 }
 
 p:nth-child(2){
-    border-left: solid ;
-    border-color: blue;
-    background-color: #c4c7e6;
+    border-left: solid 5px;
+    border-color: rgb(50, 99, 159);
+    background-color: rgb(236, 242, 244);
+    padding: 20px;
 }
 
 p:nth-of-type(1){
