@@ -1,0 +1,47 @@
+*{
+    font-family: sans-serif;
+    background-color: rgb(243, 248, 248);
+    line-height: 1.5;
+}
+
+h1{
+    color: rgb(60, 80, 136);
+    text-shadow: 5px 5px 5px #666;  
+    text-align: center;  
+}
+
+hr + div{
+    text-align: right;
+}
+
+div+h2{
+    text-align: right;
+}
+
+h1 + hr{
+    
+   width: 80%;
+}
+
+p{
+    text-align: justify;
+}
+
+p::first-letter{
+    color: blue;
+    font-size: 2em;
+}
+
+p:nth-child(2){
+    border-left: solid ;
+    border-color: blue;
+    background-color: #c4c7e6;
+}
+
+p:nth-of-type(1){
+    font-style: oblique;
+}
+
+p:last-of-type{
+    font-weight: bold;
+}

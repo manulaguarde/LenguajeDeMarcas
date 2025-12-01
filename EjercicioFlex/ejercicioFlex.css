@@ -1,0 +1,13 @@
+.card{
+    margin: 100px;
+    padding: 100px;
+    border: solid;
+    border-radius: 1em;
+    box-shadow: 5px 5px 5px ;
+}
+
+p{
+    border-left: solid blue;
+    border-radius: 0.5em;
+    padding: 10px;
+}
