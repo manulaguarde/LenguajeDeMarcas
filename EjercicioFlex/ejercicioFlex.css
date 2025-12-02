@@ -1,13 +1,48 @@
+*{
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
 .card{
     margin: 100px;
-    padding: 100px;
+    padding: 50px;
     border: solid;
+    border-color: ghostwhite;
     border-radius: 1em;
-    box-shadow: 5px 5px 5px ;
+    box-shadow: 0px 5px 10px ;
+    background-color: white;
+}
+
+h2{
+    background-color: white;
+
+}
+
+h2:first-child{
+    color:rgb(36, 104, 160) ;
+}
+
+h2:last-child{
+    font-size: 120%;
+}
+
+h1{
+    color: rgb(43, 118, 179);
+    background-color: white;
+    text-align: center;
+}
+
+.author{
+    text-align: center;
+    background-color: white;
+    color: rgb(164, 163, 163);
+    font-style: oblique;
+    font-size: 120%;
+    font-weight: bold;
 }
 
 p{
-    border-left: solid blue;
+    border-left: solid rgb(64, 160, 194);
     border-radius: 0.5em;
     padding: 10px;
 }
