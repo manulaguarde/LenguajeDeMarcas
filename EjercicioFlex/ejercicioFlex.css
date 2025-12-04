@@ -3,6 +3,13 @@
     font-family: sans-serif;
 }
 
+.card.header{
+    width: 40%;
+}
+.card.chapter{
+    width: 40%;
+}
+
 .card{
     margin: 100px;
     padding: 50px;
