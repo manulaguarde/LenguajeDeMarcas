@@ -3,16 +3,23 @@
     font-family: sans-serif;
 }
 
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
 .card.header{
-    width: 40%;
+    width: 44.9%;
 }
 .card.chapter{
-    width: 40%;
+    width: 44.9%;
 }
 
 .card{
-    margin: 100px;
-    padding: 50px;
+    margin: 20px;
+    padding: 20px;
     border: solid;
     border-color: ghostwhite;
     border-radius: 1em;
