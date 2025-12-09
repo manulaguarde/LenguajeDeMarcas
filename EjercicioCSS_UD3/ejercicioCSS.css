@@ -21,10 +21,13 @@ div+h2{
     text-align: right;
     color:rgb(50, 99, 159) ;
 }
-
+hr{
+    padding: 0%;
+}
 h1 + hr{
     
    width: 80%;
+   border-color: rgb(167, 167, 167);
 }
 
 hr + h2{
