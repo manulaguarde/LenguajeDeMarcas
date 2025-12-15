@@ -1,0 +1,40 @@
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "e n n p"
+    "e n n m"
+    "f r r m"
+    "d d d d";
+
+}
+
+div{
+    border: solid;
+    text-align: center;
+    gap: 50px;
+}
+
+div:nth-child(1){
+    grid-area: d;
+}
+div:nth-child(2){
+    grid-area: f;
+}
+
+
+div:nth-child(3){
+    grid-area: r;
+}
+
+div:nth-child(4){
+    grid-area: m;
+}
+div:nth-child(5){
+    grid-area: e;
+}
+div:nth-child(6){
+    grid-area: n;
+}
+div:nth-child(7){
+    grid-area: p;
+}
