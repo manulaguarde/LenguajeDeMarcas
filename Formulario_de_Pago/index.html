@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenido-formulario">
+
+        <h1>Formulario de pago</h1>
+        <small>(Los campos obligatorios se han marcado con *)</small>
+
+        <div class="formulario">
+            <form action="">
+                <fieldset class="informacion-contacto">
+                    <legend>Información de contacto</legend>
+                    <fieldset class="Profesión">
+                        <legend>Profesión</legend>
+                        <input type="radio" name="prof">Profesor/a <br>
+                        <input type="radio" name="prof">Estudiante <br>
+                        <input type="radio" name="prof">Otro
+
+                    </fieldset>
+                    <label for="nombre">Nombre*:</label><input type="text"> <br>
+                    <label for="Correo">Correo*:</label><input type="email"> <br>
+                    <label for="telefono">Número de teléfono*:</label><input type="text"> <br>
+                    <label for="contraseña">Contraseña*:</label><input type="password">
+                </fieldset>
+                <fieldset>
+                    <legend>Información de pago</legend>
+                    <label for="tipo-tarjeta">Tipo de tarjeta:</label><select name="tarjeta" id="tarjeta">
+                        <option value="visa" selected="selected">Visa</option>
+                        <option value="master">Master Card</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                    <br>
+                    <label for="num-tarjeta">Número de tarjeta*:</label><input type="text"><br>
+                    <label for="Fecha">Fecha de caducidad*:</label><input type="date"><br>
+                    <label for="metodo-pago">Metodo de pago preferido:</label><select name="metodo" id="metodo" size="4">
+                        <option value="tarjeta" selected="selected">Tarjeta de credito</option>
+                        <option value="paypal">Paypal</option>
+                        <option value="bizum">Bizum</option>
+                        <option value="Transferencia">Transferencia</option>
+                    </select>
+                </fieldset>
+                <fieldset class="Política-privacidad">
+                    <legend>Política de privacidad</legend>
+                    <input type="checkbox"><label for="condiciones-privacidad">He leído y acepto el Condiciones Generales
+                        y la Política de privacidad</label>
+                    <br>
+                    <input type="checkbox">
+
+
+                </fieldset>
+            </form>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

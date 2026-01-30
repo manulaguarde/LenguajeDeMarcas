@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!--Formulario-->
+    <div class="contenido-formulario">
+        <form action="">
+
+            <!--Cabecera-->
+            <div class="header">
+                <h1>¡Únete a nuestra comunidad!</h1>
+            </div>
+
+            <!--Subtitulo-->
+            <div class="subtitulo">
+                <h2>Formulario de Reseña de producto</h2>
+            </div>
+
+            <!--texto-->
+            <div class="texto">
+                <h5>Eutod et auitilacto ex de comunida de pistro de lesidos</h5>
+            </div>
+
+            <div class="campo">
+            <!--nombre del producto-->
+            <div class="nombre-producto">
+                <label for="name">Nombre del Producto</label><br>
+                <input type="text" id="name" placeholder="Nombre del Producto" title="Completa este campo">
+            </div>
+
+            <!--Valoracion-->
+            <div class="value">
+                <label for="valoracion">Valoración</label><br>
+                <select name="valoracion" id="valoracion">
+                    <option value="Selecciona una opción">Selecciona una opción</option>
+                    <option value="1 estrella">⭐</option>
+                    <option value="2 estrellas">⭐⭐</option>
+                    <option value="3 estrellas">⭐⭐⭐</option>
+                    <option value="4 estrellas">⭐⭐⭐⭐</option>
+                    <option value="5 estrellas">⭐⭐⭐⭐⭐</option>
+                </select>
+            </div>
+
+            <!--Comentario-->
+            <div class="comment">
+                <label for="comentario">Comentario</label><br>
+                <textarea name="comentario" id="comentario" rows="5" cols="50"></textarea>
+            </div>
+
+            <!--Recomendación-->
+            <div class="recomendacion">
+                <span class="recom">Recomendación</span>
+
+
+                <div class="opciones">
+                    <div class="opcion">
+                        <input type="radio" name="recom" id="recom-si">
+                        <label for="recom-si">Sí</label>
+                    </div>
+
+
+                    <div class="opcion">
+                        <input type="radio" name="recom" id="recom-no">
+                        <label for="recom-no">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <!--Correo-->
+            <div class="email">
+                <label for="correo">Correo Electrónico</label><br>
+                <input type="email" name="correo" placeholder="nombre@email.com">
+            </div>
+
+            <!--Botones-->
+            <div class="buttoms">
+                <button>Enviar Reseña</button>
+                <button>Cancelar</button>
+            </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
