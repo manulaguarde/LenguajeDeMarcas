@@ -47,4 +47,15 @@ document.writeln("<br>")
 document.writeln(arrayNuevo+"<br>") //pero las alteraciones del for each no repercuten en mi array original
                                     //no las cambia 
 
+//ordenar array
+arrayNuevo.sort()
+document.writeln(arrayNuevo+"<br>")
+
+//POP
+document.writeln(arrayNuevo.pop()+"<br>") //coge el ultimo valor y lo elimina del array
+document.writeln(arrayNuevo+"<br>")
+
+//SHIFT
+document.writeln(arrayNuevo.shift()+"<br>") //coge el primer valor y lo elimina del array
+document.writeln(arrayNuevo+"<br>")
 
