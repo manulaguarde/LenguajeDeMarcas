@@ -17,7 +17,7 @@ document.querySelector("#nombre").addEventListener("keydown",function(evento){
         alert("pulsaste espacio")
         
     }
-    document.querySelector("p").innerHTML+=", tecla pulsada: "+evento.key
+    document.querySelector("p").innerHTML+=evento.key
     
 })
 
