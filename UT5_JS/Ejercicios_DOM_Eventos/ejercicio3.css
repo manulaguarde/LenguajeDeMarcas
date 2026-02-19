@@ -1,0 +1,18 @@
+*{
+     font-weight: bold;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+
+input, select{
+    background-color:coral;
+}
+
+button{
+    margin-top: 10px;
+}
+label{
+    font-size: 80%;
+}

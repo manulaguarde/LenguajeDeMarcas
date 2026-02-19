@@ -1,0 +1,33 @@
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.cabecera{
+    background-color: blueviolet;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+td{
+    border: 2px solid;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.seleccionada{
+    background-color:blueviolet;
+}
+label, button,input,.intentos{
+    border: 1px solid;
+    
+}
+table{
+    margin: 0 auto;
+}
+.contenido{
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto;
+}
+.num{
+    background-color: rgb(185, 184, 184);
+}

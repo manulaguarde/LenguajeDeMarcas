@@ -1,0 +1,33 @@
+*{
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    text-align: center;
+}
+.operadores{
+    text-align: center;
+}
+
+input[type="text"]{
+    background-color: darkgreen;
+    text-align: center;
+    color: white;
+}
+input[type="button"]{
+    margin-left: 30px;
+}
+
+.resultado{
+    background-color: greenyellow;
+    width: 100%;
+}
+.resultado input{
+    width: 60%;
+   
+   
+}
+.resultado label{
+    margin-left: 15%;
+}
