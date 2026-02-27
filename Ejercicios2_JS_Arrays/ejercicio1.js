@@ -19,16 +19,11 @@ for (let i = 0; i < 10; i++) {
   array.push(Math.floor(Math.random() * 21) * 5)
 }
 while(array[0]<50){
-    array[0].push(Math.floor(Math.random()*21)*5)
+    array[0]=Math.floor(Math.random()*21)*5
 }
 while(array[9]>50){
-    array[0].push(Math.floor(Math.random()*21)*5)
+    array[9]=Math.floor(Math.random()*21)*5
 }
 
 document.writeln(array)
 
-/*
-for(let i=0;i<10;i++){ 
-array.push(Math.floor((Math.random()*21)*5)) 
-}
-*/

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="app.js"></script>-->
+</head>
+<body>
+    <h2>Tirar dados:</h2>
+    <input type="number" value="" id="caras" placeholder="Indique el número de caras"><br>
+    <input type="number" value="" id="dados" placeholder="Indique el número de dados"><br>
+    <input type="button" value="Tirar" onclick="tirarDados()">
+    <div id="resultado"></div>
+
+    <table>
+        <tr>
+            <td ><input class="backgroundBlue" id="boton00" type="button" value="" onclick="alterarEstado(this)"></td>
+            <td ><input class="backgroundBlue" id="boton01" type="button" value="" onclick="alterarEstado(this)"></td>
+            <td ><input class="backgroundBlue" id="boton02" type="button" value="" onclick="alterarEstado(this)"></td>
+        </tr>
+        <tr>
+            <td ><input class="backgroundBlue" id="boton10" type="button" value="" onclick="alterarEstado(this)"></td>
+            <td ><input class="backgroundBlue" id="boton11" type="button" value="" onclick="alterarEstado(this)"></td>
+            <td ><input class="backgroundBlue" id="boton12" type="button" value="" onclick="alterarEstado(this)"></td>
+        </tr>
+        <tr>
+            <td ><input class="backgroundBlue" id="boton20" type="button" value="" onclick="alterarEstado(this)"></td>
+            <td ><input class="backgroundBlue" id="boton21" type="button" value="" onclick="alterarEstado(this)"></td>
+            <td ><input class="backgroundBlue" id="boton22" type="button" value="" onclick="alterarEstado(this)"></td>
+        </tr>
+    </table>
+    <script src="juego.js"></script>
+</body>
+</html>
