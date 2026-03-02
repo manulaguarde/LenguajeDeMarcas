@@ -1,0 +1,13 @@
+.error{
+    background-color: aqua;
+    border: 1px dashed darkblue;
+}
+
+.backgroundBlue{
+    background-color: blue;
+
+}
+.backgroundRed{
+    background-color: red;
+
+}
