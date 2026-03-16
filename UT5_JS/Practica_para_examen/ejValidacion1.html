@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return validar()">
+        <h1>Formulario</h1>
+        <label for="nombre">Nombre:</label><input type="text" name="nombre" id="nombre"><br>
+        <p id="error-nombre"></p>
+        <label for="apellido">Apellido</label><input type="text" name="apellido" id="apellido"><br>
+        <p id="error-apellido"></p>
+        <label for="fecha-nac">Fecha de nacimiento:</label><input type="date" name="fecha-nac" id="nacimiento"><br>
+        <p id="error-fecha"></p>
+        <label for="domicilio">Domicilio:</label><input type="text" name="domicilio" id="domicilio"><br>
+        <p id="error-domicilio"></p>
+        <button>enviar</button><br>
+        <p id="registro-valido"></p>
+    </form>
+    
+    <script src="ejValidacion1.js"></script>
+</body>
+</html>
