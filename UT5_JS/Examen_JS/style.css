@@ -1,0 +1,14 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+form {
+    width: 300px;
+    border: 1px solid rgb(35, 106, 76);
+    border-radius: 10px;
+    background-color: rgb(247, 248, 252);
+    margin: 0 auto;
+    text-align: center;
+}
+

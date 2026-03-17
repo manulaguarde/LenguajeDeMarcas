@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--onsubmit="return validar()"-->
+    <form id="form">
+
+        <div><h2>Introduce tus gastos</h2></div>
+        <div>
+            <label for="descripcion">Descripcion: </label><br>
+            <input type="text" name="descripcion" id="descripcion">
+            <p id="descripcion-error"></p>
+        </div>
+        <div>
+            <label for="precio">Precio: </label><br>
+            <input type="text" name="precio" id="precio">
+            <p id="precio-error"></p>
+        </div>
+        <div>
+            <label for="categoria">Categoría</label>
+            <select name="categoria" id="categoria">
+                <option value="Comida">Comida</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Ocio">Ocio</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <p id="categoria-error"></p>
+        </div>
+        <div>
+            <button id="aniadir" onclick="agregar()">Añadir</button>
+        </div>
+
+    </form>
+    
+    <ul id="lista"></ul>
+    <label>Gastos totales:</label>
+    <p id="total-gastos"></p>
+    <script src="app2.js"></script>
+    
+</body>
+</html>
