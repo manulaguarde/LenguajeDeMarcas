@@ -1,0 +1,22 @@
+version: '3.1'
+services: #servicios que quiero que cree
+  web: #este nombre se lo doy yo, no tiene que tener espacios
+    image: odoo:18.0 # O la versión deseada (17.0, 16.0, etc.)
+    depends_on: #esto le dice que se inicie despues que
+      - db #la base de datos, para que no pete
+    ports:
+      - "8069:8069" #puertos que le digo que se conecte, de equipo local a equipo
+    volumes: #esto es para que cuando se apague el docker no tenga que volver a cargar los datos
+      - odoo-web-data:/var/lib/odoo #guarda los datos (las configuraciones) en binario dentro de la máquina
+      - ./extra-addons:/mnt/extra-addons #y acá almacena información extra
+  db: #y a este tambien, le llamo db
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+volumes: #esto es para declarar que los volumenes se creen
+  odoo-web-data:
+  odoo-db-data:
