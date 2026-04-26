@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="estilos.xsl"?>
+<!DOCTYPE catalogo SYSTEM "esquema.dtd">
+
+<catalogo>
+    <videojuego id="vj001" formato="fisico">
+        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <desarrolladora>Nintendo</desarrolladora>
+        <lanzamiento año="2017"/>
+        <genero>Aventura</genero>
+        <genero>Acción</genero>
+        <plataforma>Nintendo Switch</plataforma>
+        <nota>97</nota>
+    </videojuego>
+
+    <videojuego id="vj002" formato="digital">
+        <titulo>Elden Ring</titulo>
+        <desarrolladora>FromSoftware</desarrolladora>
+        <lanzamiento año="2022"/>
+        <genero>RPG</genero>
+        <genero>Acción</genero>
+        <plataforma>PC</plataforma>
+        <nota>96</nota>
+    </videojuego>
+
+    <videojuego id="vj003" formato="digital">
+        <titulo>Cyberpunk 2077</titulo>
+        <desarrolladora>CD Projekt Red</desarrolladora>
+        <lanzamiento año="2020"/>
+        <genero>RPG</genero>
+        <plataforma>PC</plataforma>
+        <nota>86</nota>
+    </videojuego>
+
+    <videojuego id="vj004" formato="fisico">
+        <titulo>Super Mario Odyssey</titulo>
+        <desarrolladora>Nintendo</desarrolladora>
+        <lanzamiento año="2017"/>
+        <genero>Plataformas</genero>
+        <plataforma>Nintendo Switch</plataforma>
+        <nota>97</nota>
+    </videojuego>
+
+    <videojuego id="vj005" formato="digital">
+        <titulo>Red Dead Redemption 2</titulo>
+        <desarrolladora>Rockstar Games</desarrolladora>
+        <lanzamiento año="2018"/>
+        <genero>Acción</genero>
+        <genero>Aventura</genero>
+        <plataforma>PS4</plataforma>
+        <nota>94</nota>
+    </videojuego>
+</catalogo>

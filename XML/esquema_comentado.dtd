@@ -1,0 +1,69 @@
+<!ELEMENT catalogo (videojuego+)>
+<!-- 
+Define el elemento raíz <catalogo>.
+(videojuego+) significa:
+- Debe contener uno o más elementos <videojuego>
+- El "+" indica "mínimo uno, sin límite máximo"
+-->
+
+<!ELEMENT videojuego (titulo, desarrolladora, lanzamiento, genero+, plataforma, nota?)>
+<!--
+Define la estructura interna de cada <videojuego>:
+
+Orden OBLIGATORIO:
+1. titulo
+2. desarrolladora
+3. lanzamiento
+4. genero (uno o más)
+5. plataforma
+6. nota (opcional)
+
+Símbolos clave:
+- genero+ → al menos uno (puede haber varios géneros)
+- nota? → opcional (puede existir o no)
+-->
+
+<!ATTLIST videojuego 
+          id ID #REQUIRED
+          formato (digital | fisico) "digital">
+<!--
+Define atributos del elemento <videojuego>:
+
+- id:
+  Tipo ID → único en todo el XML (no puede repetirse)
+  #REQUIRED → obligatorio
+
+- formato:
+  Solo puede ser "digital" o "fisico" (enumeración)
+  "digital" → valor por defecto si no se especifica
+-->
+
+<!ELEMENT titulo (#PCDATA)>
+<!--
+Elemento que contiene texto plano (Parsed Character Data)
+Ej: <titulo>Elden Ring</titulo>
+-->
+
+<!ELEMENT desarrolladora (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT plataforma (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!--
+Todos estos elementos contienen solo texto
+-->
+
+<!ELEMENT lanzamiento EMPTY>
+<!--
+Elemento vacío (no tiene contenido interno)
+Ej: <lanzamiento año="2022"/>
+-->
+
+<!ATTLIST lanzamiento 
+          año CDATA #REQUIRED>
+<!--
+Atributo del elemento lanzamiento:
+
+- año:
+  CDATA → texto libre (aunque aquí se usa como número)
+  #REQUIRED → obligatorio
+-->

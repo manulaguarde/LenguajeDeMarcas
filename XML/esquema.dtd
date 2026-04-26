@@ -1,0 +1,17 @@
+<!ELEMENT catalogo (videojuego+)>
+
+<!ELEMENT videojuego (titulo, desarrolladora, lanzamiento, genero+, plataforma, nota?)>
+
+<!ATTLIST videojuego 
+          id ID #REQUIRED
+          formato (digital | fisico) "digital">
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT desarrolladora (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT plataforma (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+
+<!ELEMENT lanzamiento EMPTY>
+<!ATTLIST lanzamiento 
+          año CDATA #REQUIRED>

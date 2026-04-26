@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración del documento XML -->
+
+<?xml-stylesheet type="text/xsl" href="estilos.xsl"?>
+<!--
+Asocia este XML con un archivo XSLT.
+Esto permite transformarlo automáticamente en HTML al abrirlo.
+-->
+
+<!DOCTYPE catalogo SYSTEM "esquema.dtd">
+<!--
+Indica que este XML sigue las reglas del DTD "esquema.dtd"
+-->
+
+<catalogo>
+<!-- Elemento raíz -->
+
+    <videojuego id="vj001" formato="fisico">
+    <!--
+    Elemento videojuego:
+    - id único
+    - formato especificado (si no, sería "digital" por defecto)
+    -->
+
+        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <!-- Nombre del juego -->
+
+        <desarrolladora>Nintendo</desarrolladora>
+        <!-- Empresa desarrolladora -->
+
+        <lanzamiento año="2017"/>
+        <!--
+        Elemento vacío con atributo:
+        año = 2017
+        -->
+
+        <genero>Aventura</genero>
+        <genero>Acción</genero>
+        <!--
+        Se permiten múltiples géneros gracias al "+"
+        -->
+
+        <plataforma>Nintendo Switch</plataforma>
+
+        <nota>97</nota>
+        <!-- Puntuación -->
+    </videojuego>
+
+    <!-- Los demás videojuegos siguen EXACTAMENTE la misma estructura -->
+    
+</catalogo>
