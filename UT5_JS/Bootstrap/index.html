@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrashCrypto Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ajuste para que el sidebar ocupe todo el alto en escritorio */
+        @media (min-width: 992px) {
+            #sidebarMenu {
+                height: 100vh;
+                position: sticky;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <button class="btn btn-outline-light d-lg-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <a class="navbar-brand" href="#">TrashCrypto Admin</a>
+
+      <form class="d-flex ms-auto me-3 d-none d-md-flex">
+        <input class="form-control form-control-dark" type="search" placeholder="Buscar token..." aria-label="Search">
+      </form>
+
+      <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Admin User
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Perfil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-lg-2 bg-white sidebar offcanvas-lg offcanvas-start shadow-sm" tabindex="-1">
+        <div class="offcanvas-header d-lg-none">
+          <h5 class="offcanvas-title">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"></button>
+        </div>
+        <div class="offcanvas-body p-4">
+          <ul class="nav flex-column w-100">
+            <li class="nav-item"><a class="nav-link active text-dark" href="#">🏠 Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-secondary" href="#">🔥 Incinerador</a></li>
+            <li class="nav-item"><a class="nav-link text-secondary" href="#">📊 Reportes</a></li>
+            <li class="nav-item"><a class="nav-link text-secondary" href="#">⚙️ Configuración</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
+        
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h6 class="text-muted">Tokens Reciclados</h6>
+                <h2 class="mb-0">1.2M</h2>
+                <small class="text-success">+15% este mes</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h6 class="text-muted">Valor Quemado</h6>
+                <h2 class="mb-0">$4,300</h2>
+                <small class="text-danger">-2% hoy</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h6 class="text-muted">Nuevos Usuarios</h6>
+                <h2 class="mb-0">342</h2>
+                <small class="text-success">+50 hoy</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h6 class="text-muted">Ahorro en Gas</h6>
+                <h2 class="mb-0">$125</h2>
+                <small class="text-info">Optimizado</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm p-4">
+          <h3 class="mb-4">Historial de Reciclaje</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Token</th>
+                        <th>Cantidad</th>
+                        <th>Valor Est.</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dogecoin (DOGE)</strong></td>
+                        <td>1,500</td>
+                        <td>$0.00</td>
+                        <td><span class="badge rounded-pill bg-danger">Incinerado 🔥</span></td>
+                        <td><button class="btn btn-sm btn-outline-primary">Detalles</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shiba Inu (SHIB)</strong></td>
+                        <td>5,000,000</td>
+                        <td>$12.50</td>
+                        <td><span class="badge rounded-pill bg-success">Reciclado ♻️</span></td>
+                        <td><button class="btn btn-sm btn-outline-primary">Detalles</button></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>    
+</html>

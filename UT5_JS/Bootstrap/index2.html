@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLuz & Gas - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Pequeño ajuste para el Sidebar en escritorio */
+        @media (min-width: 992px) {
+            .sidebar {
+                height: 100vh;
+                position: sticky;
+                top: 0;
+            }
+        }
+        .card-kpi {
+            transition: transform 0.2s;
+        }
+        .card-kpi:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid">
+            <button class="btn btn-outline-light d-lg-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <a class="navbar-brand fw-bold" href="#">EcoLuz <span class="text-info">&</span> Gas</a>
+
+            <form class="d-flex ms-auto me-3 d-none d-md-flex">
+                <input class="form-control form-control-dark bg-secondary border-0 text-white" type="search" placeholder="Buscar factura..." aria-label="Search">
+            </form>
+
+            <div class="dropdown">
+
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="usuario-sin-foto.webp" alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                    <span class="d-none d-sm-inline">Admin</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#">Mi Contrato</a></li>
+                    <li><a class="dropdown-item" href="#">Configuración</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <nav id="sidebarMenu" class="col-lg-2 bg-white sidebar offcanvas-lg offcanvas-start border-end p-0 shadow-sm" tabindex="-1">
+                <div class="offcanvas-header border-bottom d-lg-none">
+                    <h5 class="offcanvas-title fw-bold">Menú Principal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"></button>
+                </div>
+                
+                <div class="offcanvas-body flex-column p-0">
+                    <div class="p-3">
+                        <small class="text-uppercase text-muted fw-bold">Navegación</small>
+                    </div>
+                    <div class="list-group list-group-flush w-100">
+                        <a href="#" class="list-group-item list-group-item-action active border-0">
+                            🏠 Inicio (Resumen)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            ⚡ Servicio Eléctrico
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            🔥 Servicio de Gas
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            📊 Reportes Mensuales
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            ⚙️ Configuración
+                        </a>
+                    </div>
+
+                    <div class="mt-auto p-4 d-none d-lg-block">
+                        <div class="alert alert-info small border-0 shadow-sm">
+                            <strong>Tip:</strong> Hoy el tramo valle empieza a las 23:00h.
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
+                
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Resumen General</h1>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-kpi border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Gasto Hoy (Estimado)</h6>
+                                <h2 class="card-title fw-bold mb-0">4,25 €</h2>
+                                <p class="text-success small mb-0">↑ 2% vs ayer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-kpi border-0 shadow-sm h-100 border-start border-4 border-info">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Consumo Eléctrico</h6>
+                                <h2 class="card-title fw-bold mb-0">12,4 kWh</h2>
+                                <p class="text-muted small mb-0">Potencia: 4.6 kW</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-kpi border-0 shadow-sm h-100 border-start border-4 border-warning">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Consumo Gas</h6>
+                                <h2 class="card-title fw-bold mb-0">0,85 m³</h2>
+                                <p class="text-muted small mb-0">Estado: Normal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-kpi bg-danger text-white border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 opacity-75">Estado de Red</h6>
+                                <h2 class="card-title fw-bold mb-0">HORA PUNTA</h2>
+                                <p class="small mb-0 text-white-50">Evita electrodomésticos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3 border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h5 class="mb-0 fw-bold">Tramos Horarios (Hoy)</h5>
+                            </div>
+                            <div class="col-auto">
+                                <form class="row g-2 align-items-center">
+                                    <div class="col-auto">
+                                        <select class="form-select form-select-sm border-0 bg-light shadow-sm">
+                                            <option selected>Ver Hoy</option>
+                                            <option>Ayer</option>
+                                            <option>Mañana</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped mb-0 align-middle">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="ps-4">Tramo Horario</th>
+                                        <th>Precio (€/kWh)</th>
+                                        <th>Tipo de Tramo</th>
+                                        <th>Sugerencia</th>
+                                        <th class="text-end pe-4">Detalles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">8:00 - 12:00</td>
+                                        <td>0.182 €</td>
+                                        <td><span class="badge rounded-pill bg-warning text-dark">Llano ⏳</span></td>
+                                        <td>Uso moderado</td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border shadow-sm">Ver</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">12:00 - 16:00</td>
+                                        <td>0.245 €</td>
+                                        <td><span class="badge rounded-pill bg-danger">Punta 🔥</span></td>
+                                        <td>Evita consumos innecesarios</td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border shadow-sm">Ver</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">16:00 - 20:00</td>
+                                        <td>0.182 €</td>
+                                        <td><span class="badge rounded-pill bg-warning text-dark">Llano ⏳</span></td>
+                                        <td>Uso moderado</td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border shadow-sm">Ver</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">20:00 - 23:00</td>
+                                        <td>0.245 €</td>
+                                        <td><span class="badge rounded-pill bg-danger">Punta 🔥</span></td>
+                                        <td>Evita consumos innecesarios</td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border shadow-sm">Ver</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 fw-bold">23:00 - 8:00</td>
+                                        <td>0.095 €</td>
+                                        <td><span class="badge rounded-pill bg-success">Valle ♻️</span></td>
+                                        <td></td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border shadow-sm">Ver</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

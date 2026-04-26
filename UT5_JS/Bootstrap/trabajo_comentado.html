@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLuz & Gas - Dashboard de Control</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* CSS PERSONALIZADO (Mínimo): 
+           Bootstrap es genial, pero a veces necesitamos un retoque. 
+           Aquí decimos que en pantallas grandes (min-width: 992px), el menú lateral 
+           tenga la altura de la pantalla (100vh) y se quede pegado al hacer scroll (sticky). */
+        @media (min-width: 992px) {
+            .sidebar {
+                height: 100vh;
+                position: sticky;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light"> <!-- bg-light: fondo gris claro predefinido de Bootstrap -->
+
+    <!-- NAVBAR SUPERIOR -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm">
+        <!-- navbar: componente de navegación -->
+        <!-- navbar-dark: texto claro para fondos oscuros -->
+        <!-- bg-dark: fondo oscuro -->
+        <!-- sticky-top: se queda fijo arriba al hacer scroll -->
+        <!-- shadow-sm: pequeña sombra -->
+
+        <div class="container-fluid"> <!-- contenedor de ancho completo -->
+
+            <!-- BOTÓN PARA MOSTRAR SIDEBAR EN PANTALLAS PEQUEÑAS -->
+            <button class="btn btn-outline-light d-lg-none me-2" 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#sidebarMenu">
+                <!-- btn: botón base -->
+                <!-- btn-outline-light: estilo borde claro -->
+                <!-- d-lg-none: oculto en pantallas grandes -->
+                <!-- me-2: margen derecho -->
+                <!-- data-bs-toggle="offcanvas": activa el componente offcanvas -->
+                <!-- data-bs-target: indica qué sidebar abrir -->
+
+                <span class="navbar-toggler-icon"></span>
+                <!-- icono hamburguesa -->
+            </button>
+
+            <!-- MARCA -->
+            <a class="navbar-brand fw-bold" href="#">
+                <!-- navbar-brand: estilo de marca -->
+                <!-- fw-bold: texto en negrita -->
+                EcoLuz <span class="text-info">&</span> Gas
+                <!-- text-info: color azul claro -->
+            </a>
+
+            <!-- BUSCADOR (solo visible en md en adelante) -->
+            <form class="d-flex ms-auto me-3 d-none d-md-flex">
+                <!-- d-flex: display flex -->
+                <!-- ms-auto: empuja el elemento a la derecha -->
+                <!-- me-3: margen derecho -->
+                <!-- d-none d-md-flex: oculto en móvil, visible desde md -->
+
+                <input class="form-control bg-secondary border-0 text-white" 
+                       type="search" 
+                       placeholder="Buscar factura...">
+                <!-- form-control: estilo de input -->
+                <!-- bg-secondary: fondo gris oscuro -->
+                <!-- border-0: sin borde -->
+                <!-- text-white: texto blanco -->
+            </form>
+
+            <!-- MENÚ DESPLEGABLE USUARIO -->
+            <div class="dropdown">
+                <a href="#" 
+                   class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" 
+                   id="userDropdown" 
+                   data-bs-toggle="dropdown">
+                   <!-- dropdown-toggle: activa menú -->
+                   <!-- align-items-center: centra verticalmente -->
+                   <!-- text-decoration-none: quita subrayado -->
+
+                    <img src="https://via.placeholder.com/32" 
+                         class="rounded-circle me-2">
+                    <!-- rounded-circle: imagen circular -->
+
+                    <span class="d-none d-sm-inline">Admin User</span>
+                    <!-- oculto en xs -->
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end shadow">
+                    <!-- dropdown-menu-end: alineado a la derecha -->
+                    <!-- shadow: sombra -->
+
+                    <li><a class="dropdown-item" href="#">Mi Contrato</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <!-- divider: línea separadora -->
+
+                    <li><a class="dropdown-item text-danger" href="#">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container-fluid">
+        <div class="row"> <!-- sistema de grid -->
+
+            <!-- SIDEBAR -->
+            <nav id="sidebarMenu" 
+                 class="col-lg-2 bg-white sidebar offcanvas-lg offcanvas-start border-end p-0 shadow-sm">
+                <!-- col-lg-2: ocupa 2 columnas en pantallas grandes -->
+                <!-- offcanvas-lg: sidebar colapsable en móvil -->
+                <!-- offcanvas-start: aparece desde la izquierda -->
+                <!-- border-end: borde derecho -->
+                <!-- p-0: sin padding -->
+
+                <!-- HEADER SOLO EN MÓVIL -->
+                <div class="offcanvas-header border-bottom d-lg-none">
+                    <h5 class="offcanvas-title fw-bold">Menú</h5>
+                    <button type="button" 
+                            class="btn-close" 
+                            data-bs-dismiss="offcanvas" 
+                            data-bs-target="#sidebarMenu"></button>
+                    <!-- btn-close: botón de cerrar -->
+                </div>
+
+                <!-- CONTENIDO SIDEBAR -->
+                <div class="offcanvas-body flex-column p-0">
+                    <!-- flex-column: dirección vertical -->
+
+                    <div class="p-3">
+                        <small class="text-muted fw-bold">SERVICIOS ACTIVOS</small>
+                    </div>
+
+                    <div class="list-group list-group-flush w-100">
+                        <!-- list-group: lista estilizada -->
+                        <!-- flush: sin bordes externos -->
+
+                        <a href="#" class="list-group-item list-group-item-action active border-0">
+                            🏠 Dashboard Inicio
+                        </a>
+                        <!-- active: elemento activo -->
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            ⚡ Gestión de Luz
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            🔥 Gestión de Gas
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            ⚙️ Ajustes
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
+                <!-- col-lg-10: ocupa 10 columnas -->
+                <!-- ms-sm-auto: margen izquierdo automático -->
+                <!-- px-md-4: padding horizontal -->
+                <!-- py-4: padding vertical -->
+
+                <!-- HEADER -->
+                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <!-- justify-content-between: separa elementos -->
+                    <!-- align-items-center: centra vertical -->
+                    <h1 class="h2">Resumen de Consumo</h1>
+                </div>
+
+                <!-- TARJETAS -->
+                <div class="row g-4 mb-4">
+                    <!-- g-4: separación entre columnas -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <!-- responsive grid -->
+
+                        <div class="card border-0 shadow-sm h-100">
+                            <!-- card: componente tarjeta -->
+                            <!-- h-100: altura completa -->
+
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted small">
+                                    Gasto Estimado Hoy
+                                </h6>
+                                <h2 class="card-title fw-bold mb-0">3,45 €</h2>
+                                <p class="text-success small mb-0">
+                                    Optimizado ✅
+                                </p>
+                                <!-- text-success: verde -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card bg-danger text-white border-0 shadow-sm h-100">
+                            <!-- bg-danger: rojo -->
+                            <!-- text-white: texto blanco -->
+
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-white-50 small">
+                                    Precio Actual
+                                </h6>
+                                <h2 class="card-title fw-bold mb-0">HORA PUNTA</h2>
+                                <p class="small mb-0">
+                                    Precio: 0.24 €/kWh 🔥
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLA -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3 border-0 d-flex justify-content-between">
+                        <h5 class="mb-0 fw-bold">Precios Luz (Hoy)</h5>
+
+                        <select class="form-select form-select-sm w-auto">
+                            <!-- form-select: estilo select -->
+                            <!-- w-auto: ancho automático -->
+                            <option>Filtrar por: Hoy</option>
+                            <option>Ayer</option>
+                        </select>
+                    </div>
+
+                    <div class="table-responsive">
+                        <!-- permite scroll en móviles -->
+
+                        <table class="table table-striped table-hover mb-0 align-middle">
+                            <!-- table-striped: filas alternas -->
+                            <!-- table-hover: efecto hover -->
+                            <!-- align-middle: centrado vertical -->
+
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="ps-4">Tramo Horario</th>
+                                    <!-- ps-4: padding izquierda -->
+
+                                    <th>Coste kWh</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="ps-4 fw-bold">10:00 - 14:00</td>
+                                    <td>0.28 €</td>
+                                    <td>
+                                        <span class="badge rounded-pill bg-danger">
+                                            Punta
+                                        </span>
+                                        <!-- badge: etiqueta -->
+                                        <!-- rounded-pill: forma ovalada -->
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="ps-4 fw-bold">22:00 - 00:00</td>
+                                    <td>0.08 €</td>
+                                    <td>
+                                        <span class="badge rounded-pill bg-success">
+                                            Valle
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- SCRIPT BOOTSTRAP (necesario para dropdowns, offcanvas, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
