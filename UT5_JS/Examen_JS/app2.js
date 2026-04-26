@@ -5,22 +5,6 @@ form.addEventListener("submit",function(event){
     let gastos=document.querySelector("#total-gastos")
     
     if (validateForm()){
-    /*let descripcion=document.querySelector("#descripcion").value
-    let desc=document.createElement("li")
-    desc.textContent=descripcion
-    document.querySelector("#lista").appendChild(desc)
-    let precio=document.querySelector("#precio").value
-    let pr=document.createElement("li")
-    pr.textContent=precio
-    document.querySelector("#lista").appendChild(pr)
-    let categoria=document.querySelector("#categoria").value
-    let cat=document.createElement("li")
-    cat.textContent=categoria
-    document.querySelector("#lista").appendChild(cat)  
-    document.querySelector("#descripcion").value=""
-    document.querySelector("#precio").value=""
-    document.querySelector("#categoria").value=""
-    let num=parseFloat(precio)*/
     let descripcion=document.querySelector("#descripcion").value
     let precio=document.querySelector("#precio").value
     let categoria=document.querySelector("#categoria").value
@@ -33,7 +17,7 @@ form.addEventListener("submit",function(event){
     let num=parseFloat(precio)
     suma=suma+num
     }
-    gastos.innerHTML=suma
+    gastos.innerHTML=suma+" euros"
 })
 
 function showError(elemento,mensaje){
@@ -64,6 +48,11 @@ function validarPrecio(){
         return false
     }
     let num=parseFloat(value)
+    if (!/^[1-9]/.test(num)){
+        showError(document.querySelector("#precio-error"),"tiene que ser un numero ")
+        return false
+    }
+    
     if(num<=0){
         showError(document.querySelector("#precio-error"),"El precio no puede ser menor o iugal a 0")
         return false
